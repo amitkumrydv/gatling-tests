@@ -1,0 +1,42 @@
+# Global default SLA thresholds applied to all scenarios unless overridden
+default:
+  maxResponseTime: 2000        # in milliseconds
+  meanResponseTime: 1000       # in milliseconds
+  p95ResponseTime: 1500        # in milliseconds
+  p99ResponseTime: 1800        # in milliseconds
+  successRate: 99.0            # percentage
+  requestsPerSec: 100.0        # throughput target
+  minRequests: 10000           # minimum number of requests to validate SLA
+  slaWindow: 10m               # optional: rolling time window for SLA validation
+
+# SLA profiles by tag for inheritance
+tags:
+  critical:
+    successRate: 99.9
+    p95ResponseTime: 1000
+    maxResponseTime: 1500
+  non_critical:
+    successRate: 95.0
+    p95ResponseTime: 2000
+    maxResponseTime: 2500
+
+
+# Optional: Environment-specific overrides
+environments:
+  prod:
+    default:
+      successRate: 99.5
+      requestsPerSec: 150.0
+    scenarios:
+      dashboard:
+        meanResponseTime: 1000
+        successRate: 99.0
+
+  staging:
+    default:
+      successRate: 98.0
+      requestsPerSec: 50.0
+    scenarios:
+      login:
+        meanResponseTime: 900
+        successRate: 98.5

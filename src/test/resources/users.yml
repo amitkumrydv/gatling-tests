@@ -1,0 +1,36 @@
+virtual_users:
+  light:
+    description: "Light load users for quick health checks and basic validation"
+    users: 15
+
+  moderate:
+    description: "Moderate users simulating typical concurrent active students"
+    users: 120
+
+  peak:
+    description: "Peak load users for exam days, assignment deadlines, or big events"
+    users: 350
+
+  spike:
+    description: "Spike load users to simulate sudden bursts like login rush or announcements"
+    users: 500
+
+  soak:
+    description: "Soak test users for long-term steady load during normal study periods"
+    users: 150
+
+  stress:
+    description: "Stress test users pushing system to near full concurrency to find limits"
+    users: 900
+
+  recovery_overload:
+    description: "Overload users to simulate a system spike during recovery test"
+    users: 500
+
+  recovery_normal:
+    description: "Normal users after overload period during recovery test"
+    users: 100
+
+  ramp_down:
+    description: "Starting users count for ramp down scenario"
+    users: 300

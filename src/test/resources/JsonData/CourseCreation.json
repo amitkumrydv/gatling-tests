@@ -1,0 +1,12 @@
+{
+  "course": {
+    "name": "Copy Course API Testing LOL",
+    "course_code": "Copy Course API Testing",
+    "start_at": "2024-09-23T01:00Z",
+    "end_at": "2024-12-31T01:00Z",
+
+    "restrict_enrollments_to_course_dates": true
+   
+  }
+
+}
