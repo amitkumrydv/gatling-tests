@@ -30,3 +30,6 @@ DELETE /courses/{course_id}
 Deletes the course and cleans up all related resources after the assignment and quiz have been submitted.
 
 ![image](https://github.com/user-attachments/assets/9b31e449-954f-4a59-bb12-ffa694b5d499)
+
+<img width="1080" height="1953" alt="Gatling_flow" src="https://github.com/user-attachments/assets/62875bf8-046f-416d-a508-619d2a4feb7f" />
+
